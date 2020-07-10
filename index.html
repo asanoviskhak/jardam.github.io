@@ -91,29 +91,6 @@
             }
         }
     }
-    function addTable() {
-    var myTableDiv = document.getElementById("myDynamicTable");
-
-    var table = document.createElement('TABLE');
-    table.border = '1';
-
-    var tableBody = document.createElement('TBODY');
-    table.appendChild(tableBody);
-
-    for (var i = 0; i < 3; i++) {
-        var tr = document.createElement('TR');
-        tableBody.appendChild(tr);
-
-        for (var j = 0; j < 4; j++) {
-        var td = document.createElement('TD');
-        td.width = '75';
-        td.appendChild(document.createTextNode("Cell " + i + "," + j));
-        tr.appendChild(td);
-        }
-    }
-    myTableDiv.appendChild(table);
-    }
-    addTable();
     </script>
     <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
@@ -121,8 +98,8 @@
     </script>
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
-    <table id="myTable" cellpadding="2" cellspacing="2" border="1" onclick="tester()"></table>
-        <script>
+    <input type = text id='row:col' name='row:col' style="float:left;">
+        <!-- <script>
             var student;
             for ( $row = 0; $row < 8; $row++) {
                 student = {
@@ -130,7 +107,7 @@
                     rank: "Name" + j,
                     stuclass: "Phone" + j,
                 };
-                var table = document.getElementById("myTable");
+                var table = document.getElementById("");
                 var row = table.insertRow(j);
                 var cell1 = row.insertCell(0);
                 var cell2 = row.insertCell(1);
@@ -140,6 +117,6 @@
                 cell2.innerHTML = student.rank,
                 cell3.innerHTML = student.stuclass;
             }
-        </script>
+        </script> -->
   </body>
 </html>
